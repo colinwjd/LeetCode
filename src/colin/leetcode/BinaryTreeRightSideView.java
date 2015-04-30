@@ -26,7 +26,7 @@ public class BinaryTreeRightSideView {
         List<Integer> res = new ArrayList<Integer>();
 
         if(root == null) return res;
-
+        // 找到每一层最右边的值
         visitLevel(root, 1, res);
         return res;
     }
