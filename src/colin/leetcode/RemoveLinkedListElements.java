@@ -15,14 +15,12 @@ public class RemoveLinkedListElements {
 
 		ListNode preNode = fakeHead;
 		ListNode curNode = fakeHead.next;
-		while (curNode != null) {
-			if (curNode.val == val) {
-				preNode.next = curNode.next;
-				curNode = curNode.next;
-			} else {
-				preNode = preNode.next;
-				curNode = curNode.next;
-			}
+		while (curNode != null) if (curNode.val == val) {
+			preNode.next = curNode.next;
+			curNode = curNode.next;
+		} else {
+			preNode = preNode.next;
+			curNode = curNode.next;
 		}
 		return fakeHead.next;
 	}
